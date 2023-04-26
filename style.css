@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+body{
+    min-height:100vh;
+    background: url(img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    background: gainsboro;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 20px 7%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+}
+.header{
+    font-size:17px;
+}
+.nav ul{
+    list-style: none;
+}
+.nav ul li{
+    position: relative;
+    float: left;
+}
+.nav ul li a{
+    padding:15px;
+    color:black;
+    font-weight: bold;
+    display: block;
+}
+.nav ul li a:hover{
+    background: gray;
+}
+#menu-bar{
+    display: none;
+}
+.navbar label{
+    padding:15px;
+    color:black;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width:900px)
+{
+    .navbar{
+        padding: 20px;
+    }
+    .navbar label{
+        display: initial;
+    }
+    .nav{
+        position: absolute;
+        top:100%;
+        left:0;
+        right: 0;
+        background: gainsboro;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+    .nav ul li{
+        width:100%;
+    }
+    #menu-bar:checked ~ .nav{
+        display: initial;
+    }
+
+}
